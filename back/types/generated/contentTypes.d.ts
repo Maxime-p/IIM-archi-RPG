@@ -988,16 +988,7 @@ export interface ApiScenarioSceneScenarioScene extends Schema.CollectionType {
     title: Attribute.String;
     location: Attribute.String;
     description: Attribute.Text;
-    props: Attribute.Relation<
-      'api::scenario-scene.scenario-scene',
-      'oneToMany',
-      'api::prop.prop'
-    >;
-    characters: Attribute.Relation<
-      'api::scenario-scene.scenario-scene',
-      'oneToMany',
-      'api::character.character'
-    >;
+    characters: Attribute.JSON;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

@@ -18,14 +18,22 @@ export const ScenarioHistoryList: FC = () => {
     <div
       style={{
         display: 'flex',
-        alignItems: 'stretch',
-        height: '100%',
         gap: '10px',
         padding: '10px',
+        height: '100%',
       }}
     >
       <SideBar pagesName="Scenario History" imgUrl={SidebarImg} />
-      <ul style={{ overflowY: 'scroll', display: 'flex', flexWrap: 'wrap' }}>
+      <ul
+        style={{
+          overflowY: 'scroll',
+          display: 'grid',
+          gridTemplateColumns: 'repeat(3, 1fr)',
+          flexGrow: 1,
+          maxHeight: '100%',
+          alignSelf: 'flex-start',
+        }}
+      >
         {scenarios.map((scenario) => (
           <ScenarioHistoryItem key={scenario.id} scenario={scenario} />
         ))}
