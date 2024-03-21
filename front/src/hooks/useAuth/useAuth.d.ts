@@ -1,4 +1,4 @@
 export interface formLoginTypes {
-    email: string;
-    password: string;
+  email: string
+  password: string
 }

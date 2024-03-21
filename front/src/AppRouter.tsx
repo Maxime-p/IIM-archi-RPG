@@ -12,7 +12,7 @@ import PlayerSelection from './pages/PlayerSelection/PlayerSelection.tsx'
 import EditScenarioPage from './pages/EditScenarioPage'
 import { ScenarioHistoryList } from './pages/ScenarioHistory'
 import { PlayerList } from './pages/PlayerList/PlayerList.tsx'
-import Login from "./pages/Login/Login.tsx";
+import Login from './pages/Login/Login.tsx'
 
 /**
  * Renders the application content.
