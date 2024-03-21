@@ -7,6 +7,7 @@ import Scenario from '../../types/Scenario.ts'
 import { api } from '../../services/api.ts'
 import SideBar from '../SideBar/SideBar'
 import SidebarImg from '../../assets/CardsHP1.jpeg'
+import { ia } from '../../services/ia.ts'
 
 /**
  * EditScenario component is responsible for rendering the scenario editing page.
@@ -25,20 +26,32 @@ function EditScenario() {
   const [scenario, setScenario] = useState<Scenario | null>(null)
   const [isLoading, setIsLoading] = useState(false)
 
-  const handleGenerate = async ({
-    anecdote,
-    agentNumber,
-  }: {
+  const handleGenerate = async ({ anecdote, agentNames, }: {
     anecdote: string
-    agentNumber: number
+    agentNames: string
   }) => {
     setIsLoading(true)
     try {
-      const { data: scenario } = await api.post<Scenario>('sentinelle/briefs', {
-        news: anecdote,
-        characterNumber: agentNumber,
+      const { data: scenario } = await ia.post<Scenario>('generate', {
+        prompt: anecdote,
+        characters: agentNames.split(','),
       })
       setScenario(scenario)
+
+      const promises = scenario.scenes.map(async (scene) => {
+        const {data: result } = await api.post<{data: {id:string}}>('scenario-scenes', {
+          data: scene,
+        })
+        return result.data.id
+      })
+      const sceneIds = await Promise.all(promises)
+      await api.post('scenarios', {
+        data: {
+          name: scenario.name,
+          description: scenario.description,
+          scenes: sceneIds,
+        },
+      })
     } catch (e) {
       console.error(e)
     } finally {
