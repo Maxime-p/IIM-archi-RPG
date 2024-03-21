@@ -43,7 +43,16 @@ copy the `.env.example` file to `.env` and fill in the required fields in both `
 
 ## Backend
 
-_WIP_
+- `config/` - Configuration files
+- `database`
+  - `migrations/`- Database migrations
+- `public/` - Static files
+- `src/` - Entry point of the backend
+  - `src/admin/` - Admin panel
+  - `src/api/` - API routes
+  - `src/extensions/` - Extensions
+- `types/`
+  - `generated/` - Generated types
 
 ## AI
 
