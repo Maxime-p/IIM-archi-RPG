@@ -1,3 +1,4 @@
 flask
+flask_cors
 llama-index
 llama-index-llms-ollama

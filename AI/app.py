@@ -1,9 +1,10 @@
 import json
 
 from flask import Flask, request
-from llama_index.llms.ollama import Ollama
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 
 
 @app.route('/')
