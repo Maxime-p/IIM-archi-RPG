@@ -112,7 +112,7 @@ Delete a scenario by id
 
 ## Users
 
-### POST api/auth/login
+### POST api/auth/local
 Login a user with email and password
 ```json
 {
