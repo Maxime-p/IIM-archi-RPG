@@ -1,3 +1,4 @@
+
 // This TypeScript file defines a React functional component, `FormInput`, that renders a labeled input field.
 // It uses CSS modules for styling, indicated by the import of `style` from a local CSS module file. The component
 // is designed to be reusable and customizable for different types of input fields such as email, password, and text.
