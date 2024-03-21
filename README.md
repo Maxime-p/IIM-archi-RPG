@@ -126,6 +126,6 @@ Login a user with email and password
 }
 ```
 
-# Application's architecture schema
+# 🏗️ Application's architecture schema
 
 (insert schema here)
