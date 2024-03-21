@@ -1,12 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
-
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
-
 
 #root {
   height: 100vh;
@@ -39,7 +37,6 @@ html {
   max-height: 100vh;
   overflow: hidden;
 }
-
 
 button {
   border-radius: 8px;

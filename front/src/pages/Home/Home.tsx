@@ -9,31 +9,31 @@ import './Home.scss'
  */
 const Home: React.FC = () => {
   return (
-      <div className="HPcontainer ">
-        <div className="cardcontainer">
-          {/* Link to the player creation page */}
-          <Link to="/player" className="cards card1">
-            <div className="cardcontainercontent">
-              <h3 className="cardstitle"> player creation</h3>
-              <p>Create your character and choose its skills & initiative</p>
-            </div>
-          </Link>
-          {/* Link to the scenario creation page */}
-          <Link to="/scenario" className="cards card2">
-            <div className="cardcontainercontent">
-              <h3 className="cardstitle"> scenario creation </h3>
-              <p>Create your scenario using AI, based on the AFP dispatch</p>
-            </div>
-          </Link>
-          {/* Link to the game start page */}
-          <Link to="/" className="cards card3">
-            <div className="cardcontainercontent">
-              <img src={RightArrow} alt="Start the game" />
-              <h3 className="cardstitle">start the game</h3>
-            </div>
-          </Link>
-        </div>
+    <div className="HPcontainer ">
+      <div className="cardcontainer">
+        {/* Link to the player creation page */}
+        <Link to="/player" className="cards card1">
+          <div className="cardcontainercontent">
+            <h3 className="cardstitle"> player creation</h3>
+            <p>Create your character and choose its skills & initiative</p>
+          </div>
+        </Link>
+        {/* Link to the scenario creation page */}
+        <Link to="/scenario" className="cards card2">
+          <div className="cardcontainercontent">
+            <h3 className="cardstitle"> scenario creation </h3>
+            <p>Create your scenario using AI, based on the AFP dispatch</p>
+          </div>
+        </Link>
+        {/* Link to the game start page */}
+        <Link to="/" className="cards card3">
+          <div className="cardcontainercontent">
+            <img src={RightArrow} alt="Start the game" />
+            <h3 className="cardstitle">start the game</h3>
+          </div>
+        </Link>
       </div>
+    </div>
   )
 }
 
