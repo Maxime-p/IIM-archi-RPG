@@ -52,7 +52,3 @@ This reusability of components not only makes the code more maintainable and eas
 ![tree](https://cdn.discordapp.com/attachments/1220356796305117204/1220366185200226354/image.png?ex=660ead93&is=65fc3893&hm=7766d5c88b4072b70d8fe59f009b5ba1ef1187105506a36d54c203c22a6502fc&)*
 
 
-## SETUP ENV VARIABLES
-
-- go to strapi to generate a new token (with full access)
-- add it to a .env file copied from .env.example
