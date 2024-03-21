@@ -1,10 +1,11 @@
 import React from 'react'
 import style from './style.module.css'
+
 interface FormInputProps {
   label: string
   placeholder?: string
   name: string
-  type: 'text' | 'password'
+  type: 'email' | 'password' | 'text'
   onChange: (value: string) => void
 }
 

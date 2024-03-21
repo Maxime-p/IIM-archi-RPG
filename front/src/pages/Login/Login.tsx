@@ -3,11 +3,23 @@ import style from './login.module.css'
 import FormInput from '../../components/FormInput/FormInput.tsx'
 import { useAuth } from '../../hooks/useAuth/useAuth.ts'
 import { formLoginTypes } from '../../hooks/useAuth/useAuth.d'
+import { useAtom } from 'jotai'
+import { userAtom } from '../../hooks/useAuth/userAtom.ts'
+import { useNavigate } from 'react-router-dom'
+
 const Login: React.FC = () => {
   const [loginForm, setLoginForm] = useState<formLoginTypes>({
     email: '',
     password: '',
   })
+
+  const navigate = useNavigate()
+
+  const [user] = useAtom(userAtom)
+
+  if (user) {
+    navigate('/')
+  }
 
   const { handleLogin, error } = useAuth()
 
@@ -29,7 +41,7 @@ const Login: React.FC = () => {
         <h1>Login</h1>
         <form onSubmit={(e) => handleSubmit(e)}>
           <FormInput
-            type={'text'}
+            type={'email'}
             label={'Email'}
             placeholder={'test@gmail.com'}
             onChange={(value) => handleInputChange('email', value)}
