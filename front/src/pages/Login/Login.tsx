@@ -32,8 +32,6 @@ const Login: React.FC = () => {
     
   /*Check if user is already connected, if already connected we redirect the user on the home page*/
   const [user] = useAtom(userAtom)
-
-  const navigate = useNavigate()
   
   if (user) {
     navigate('/')
