@@ -1,0 +1,22 @@
+{
+  "name": "iim-archi-rpg",
+  "version": "1.0.0",
+  "description": "",
+  "workspaces": [
+    "front",
+    "back"
+  ],
+  "scripts": {
+    "dev": "run-p dev:*",
+    "dev:front": "npm run dev --workspace front",
+    "build": "run-p build:*",
+    "build:front": "npm run build --workspace front",
+    "format": "run-p format:*",
+    "format:front": "npm run format --workspace front",
+    "format-check": "run-p format-check:*",
+    "format-check:front": "npm run format-check --workspace front"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.5"
+  }
+}
