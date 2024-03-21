@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "scenario_scenes",
+  "info": {
+    "singularName": "scenario-scene",
+    "pluralName": "scenario-scenes",
+    "displayName": "scenarioScene",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "location": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "props": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::prop.prop"
+    },
+    "characters": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::character.character"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "mentals",
+  "info": {
+    "singularName": "mental",
+    "pluralName": "mentals",
+    "displayName": "mental"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    }
+  }
+}
