@@ -47,11 +47,7 @@ const EditScenarioBody: FC<GeneratedScenarioProps> = ({ theScenario }) => {
               <p>Title: {scene.title}</p>
               <p>Location: {scene.location}</p>
               <p>Description: {scene.description}</p>
-              <p>Props: {scene.props.map((prop) => prop.name).join(', ')}</p>
-              <p>
-                Characters:{' '}
-                {scene.characters.map((character) => character.name).join(', ')}
-              </p>
+              <p>Characters: {scene.characters.join(', ')}</p>
             </div>
           ))}
         </div>

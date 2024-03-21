@@ -6,8 +6,7 @@ interface Scene {
   title: string // The name of the schema
   location: string // The location of the schema
   description: string // The description of the schema
-  props: { name: string }[]
-  characters: { name: string }[]
+  characters: string[]
 }
 
 /**

@@ -29,14 +29,16 @@ const AppContent: React.FC = () => {
     <>
       {location.pathname !== '/' && <Menu />}
       {/* Non affichage du menu dans l'accueil */}
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/scenario" element={<EditScenarioPage />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/history" element={<ScenarioHistoryList />} />
-        <Route path="/player" element={<PlayerSelection />} />
-        <Route path="/players" element={<PlayerList />} />
-      </Routes>
+      <div style={{ flexGrow: 1 }}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/scenario" element={<EditScenarioPage />} />
+          <Route path="/history" element={<ScenarioHistoryList />} />
+          <Route path="/player" element={<PlayerSelection />} />
+          <Route path="/players" element={<PlayerList />} />
+        </Routes>
+      </div>
     </>
   )
 }
