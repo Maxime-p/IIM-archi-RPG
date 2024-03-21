@@ -5,6 +5,7 @@ import { postApiLogin } from '../../services/auth/login.ts'
 import { useNavigate } from 'react-router-dom'
 import { useAtom } from 'jotai'
 import { userAtom } from './userAtom.ts'
+
 interface useAuthProps {
   handleLogin: (formLogin: formLoginTypes) => void
   error: string | null
@@ -13,7 +14,7 @@ interface useAuthProps {
 
 export const useAuth = (): useAuthProps => {
   const [error, setError] = useState<string | null>(null)
-  const [user, setUser] = useAtom(userAtom)
+  const [, setUser] = useAtom(userAtom)
   const navigate = useNavigate()
   const handleLogin = async (loginForm: formLoginTypes) => {
     try {

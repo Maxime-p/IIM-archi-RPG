@@ -8,9 +8,9 @@
     flex-direction: column;
     width: 449px;
     align-items: center;
-    p{
+    p {
       margin-top: 20px;
-      font-family: "Bebas Neue";
+      font-family: 'Bebas Neue';
       font-size: 22px;
       color: red;
     }

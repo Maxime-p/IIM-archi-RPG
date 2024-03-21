@@ -2,16 +2,13 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import RightArrow from '../../assets/RightArrow.png' // Make sure the path is correct
 import './Home.scss'
-import { useAtom } from 'jotai/index'
-import { userAtom } from '../../hooks/useAuth/userAtom.ts'
+
 /**
  * Home component is the landing page of the application.
  * It provides navigation to the player creation, scenario creation, and game start pages.
  * @returns {React.FC} The rendered component
  */
 const Home: React.FC = () => {
-  const [user, setUser] = useAtom(userAtom)
-  console.log(user)
   return (
     <div className="HPcontainer ">
       <div className="cardcontainer">
