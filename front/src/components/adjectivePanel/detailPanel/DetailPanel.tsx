@@ -32,7 +32,8 @@ const DetailPanel: React.FC<DetailPanelProps> = ({
 }) => {
   const setAdjectives = useSetAtom(characterInfos)
   const [atom] = useAtom(characterInfos)
-  const currentAdjectives = atom.adjectives[name]
+  const currentAdjectives =
+    atom.adjectives[name as keyof typeof atom.adjectives]
   const [selectedAdjectives, setSelectedAdjectives] =
     React.useState<string[]>(currentAdjectives)
   const [counter, setCounter] = React.useState<number>(currentAdjectives.length)

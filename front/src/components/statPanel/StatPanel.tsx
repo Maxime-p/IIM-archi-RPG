@@ -83,7 +83,7 @@ const StatPanel: React.FC = () => {
   ) => {
     const newProfession = event.target.value
     setProfession(newProfession)
-    const newSkills = professionToSkills[newProfession] || []
+    const newSkills = professionToSkills[newProfession as Profession] || []
     setSkills(newSkills)
     setInfos((prevState) => ({
       ...prevState,

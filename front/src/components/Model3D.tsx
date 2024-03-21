@@ -7,7 +7,7 @@ import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js'
  * It uses the Three.js library to create a 3D scene, add lighting, load the 3D model, and animate it.
  * @returns {React.FC} The rendered component
  */
-const ModelViewer: React.FC = () => {
+const ModelViewer: FC = () => {
   // Reference to the HTML element where the 3D scene will be mounted
   const mountRef = useRef<HTMLDivElement>(null)
   // Reference to the loaded 3D model

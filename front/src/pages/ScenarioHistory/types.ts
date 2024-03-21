@@ -1,4 +1,4 @@
-import Scenario from '../../models/Scenario.tsx'
+import Scenario from '../../types/Scenario.ts'
 
 export interface ScenarioHistory {
   id: number

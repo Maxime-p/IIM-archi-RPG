@@ -1,6 +1,5 @@
 // Import the EditScenario component
 import EditScenario from '../../components/EditScenario'
-import { Link } from 'react-router-dom'
 
 /**
  * EditScenarioPage component is responsible for rendering the EditScenario component.

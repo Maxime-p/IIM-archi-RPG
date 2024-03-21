@@ -17,7 +17,19 @@ import { atom } from 'jotai'
  * @property {string} infos.clearance - The clearance level of the character.
  * @property {Array} infos.skills - The skills of the character.
  */
-export const characterInfos = atom({
+export const characterInfos = atom<{
+  adjectives: {
+    PHYSICAL: string[]
+    MENTAL: string[]
+    SOCIAL: string[]
+  }
+  infos: {
+    name: string
+    profession: string
+    clearance: string
+    skills: string[]
+  }
+}>({
   adjectives: {
     PHYSICAL: [],
     MENTAL: [],

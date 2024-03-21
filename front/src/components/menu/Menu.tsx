@@ -16,7 +16,7 @@ const Menu: React.FC = () => {
         <li style={{ display: 'inline-block', marginRight: 10 }}>
           <NavLink
             to="/"
-            style={({ isActive }) => ({
+            style={({ isActive }: { isActive: boolean }) => ({
               background: isActive ? 'white' : '',
               color: isActive ? '#751313' : 'white',
             })}
@@ -27,7 +27,7 @@ const Menu: React.FC = () => {
         <li style={{ display: 'inline-block', marginRight: 10 }}>
           <NavLink
             to="/player"
-            style={({ isActive }) => ({
+            style={({ isActive }: { isActive: boolean }) => ({
               background: isActive ? 'white' : '',
               color: isActive ? '#751313' : 'white',
             })}
@@ -38,7 +38,7 @@ const Menu: React.FC = () => {
         <li style={{ display: 'inline-block', marginRight: 10 }}>
           <NavLink
             to="/players"
-            style={({ isActive }) => ({
+            style={({ isActive }: { isActive: boolean }) => ({
               background: isActive ? 'white' : '',
               color: isActive ? '#751313' : 'white',
             })}
@@ -49,7 +49,7 @@ const Menu: React.FC = () => {
         <li style={{ display: 'inline-block', marginRight: 10 }}>
           <NavLink
             to="/scenario"
-            style={({ isActive }) => ({
+            style={({ isActive }: { isActive: boolean }) => ({
               background: isActive ? 'white' : '',
               color: isActive ? '#751313' : 'white',
             })}
@@ -60,7 +60,7 @@ const Menu: React.FC = () => {
         <li style={{ display: 'inline-block', marginRight: 10 }}>
           <NavLink
             to="/history"
-            style={({ isActive }) => ({
+            style={({ isActive }: { isActive: boolean }) => ({
               background: isActive ? 'white' : '',
               color: isActive ? '#751313' : 'white',
             })}
