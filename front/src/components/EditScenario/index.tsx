@@ -53,7 +53,7 @@ function EditScenario() {
       const sceneIds = await Promise.all(promises)
       await api.post('scenarios', {
         data: {
-          name: scenario.name,
+          name: scenario.title,
           description: scenario.description,
           scenes: sceneIds,
         },
