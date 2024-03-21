@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import RightArrow from '../assets/RightArrow.png' // Make sure the path is correct
-
+import RightArrow from '../../assets/RightArrow.png' // Make sure the path is correct
+import './Home.scss'
 /**
  * Home component is the landing page of the application.
  * It provides navigation to the player creation, scenario creation, and game start pages.
@@ -9,8 +9,6 @@ import RightArrow from '../assets/RightArrow.png' // Make sure the path is corre
  */
 const Home: React.FC = () => {
   return (
-    // Use a React fragment to wrap all your elements
-    <>
       <div className="HPcontainer ">
         <div className="cardcontainer">
           {/* Link to the player creation page */}
@@ -36,7 +34,6 @@ const Home: React.FC = () => {
           </Link>
         </div>
       </div>
-    </>
   )
 }
 
