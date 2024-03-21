@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom'
 import './PlayerCreateCta.scss'
 import RightArrow from '../../../assets/right-arrow.png'
 
-function toAdjectives(adjectives: string[]): { name:string }[] {
+function toAdjectives(adjectives: string[]): { name: string }[] {
   return adjectives.map((name) => ({ name }))
 }
 

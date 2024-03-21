@@ -9,7 +9,7 @@ export const PlayerList: FC = () => {
   const [players, setPlayers] = useState<GetPlayerItem[]>([])
   useEffect(() => {
     const fetchPlayers = async () => {
-      const response = await api.get<{data: GetPlayerItem[] }>('/players')
+      const response = await api.get<{ data: GetPlayerItem[] }>('/players')
       setPlayers(response.data.data)
     }
     fetchPlayers()
