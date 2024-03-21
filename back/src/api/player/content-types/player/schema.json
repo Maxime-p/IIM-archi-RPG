@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "players",
+  "info": {
+    "singularName": "player",
+    "pluralName": "players",
+    "displayName": "Player",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "profession": {
+      "type": "string"
+    },
+    "clearance": {
+      "type": "string"
+    },
+    "mentals": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::mental.mental"
+    },
+    "socials": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::social.social"
+    },
+    "physicals": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::physical.physical"
+    }
+  }
+}

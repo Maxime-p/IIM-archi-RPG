@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "physicals",
+  "info": {
+    "singularName": "physical",
+    "pluralName": "physicals",
+    "displayName": "physical"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    }
+  }
+}
