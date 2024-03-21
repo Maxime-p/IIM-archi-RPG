@@ -127,5 +127,5 @@ Login a user with email and password
 ```
 
 # 🏗️ Application's architecture schema
+![archi](https://github.com/SveRKeR92/IIM-archi-RPG/assets/70761787/13cd3d9c-f03f-4302-adce-0846a2a0ed0d)
 
-(insert schema here)
