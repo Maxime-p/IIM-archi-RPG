@@ -788,6 +788,307 @@ export interface PluginI18NLocale extends Schema.CollectionType {
   };
 }
 
+export interface ApiCharacterCharacter extends Schema.CollectionType {
+  collectionName: 'characters';
+  info: {
+    singularName: 'character';
+    pluralName: 'characters';
+    displayName: 'character';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    name: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::character.character',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::character.character',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiMentalMental extends Schema.CollectionType {
+  collectionName: 'mentals';
+  info: {
+    singularName: 'mental';
+    pluralName: 'mentals';
+    displayName: 'mental';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    name: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::mental.mental',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::mental.mental',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiPhysicalPhysical extends Schema.CollectionType {
+  collectionName: 'physicals';
+  info: {
+    singularName: 'physical';
+    pluralName: 'physicals';
+    displayName: 'physical';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    name: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::physical.physical',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::physical.physical',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiPlayerPlayer extends Schema.CollectionType {
+  collectionName: 'players';
+  info: {
+    singularName: 'player';
+    pluralName: 'players';
+    displayName: 'Player';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    name: Attribute.String;
+    profession: Attribute.String;
+    clearance: Attribute.String;
+    mentals: Attribute.Relation<
+      'api::player.player',
+      'oneToMany',
+      'api::mental.mental'
+    >;
+    socials: Attribute.Relation<
+      'api::player.player',
+      'oneToMany',
+      'api::social.social'
+    >;
+    physicals: Attribute.Relation<
+      'api::player.player',
+      'oneToMany',
+      'api::physical.physical'
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::player.player',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::player.player',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiPropProp extends Schema.CollectionType {
+  collectionName: 'props';
+  info: {
+    singularName: 'prop';
+    pluralName: 'props';
+    displayName: 'prop';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    name: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<'api::prop.prop', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<'api::prop.prop', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+  };
+}
+
+export interface ApiScenarioScenario extends Schema.CollectionType {
+  collectionName: 'scenarios';
+  info: {
+    singularName: 'scenario';
+    pluralName: 'scenarios';
+    displayName: 'Scenario';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    scenes: Attribute.Relation<
+      'api::scenario.scenario',
+      'oneToMany',
+      'api::scenario-scene.scenario-scene'
+    >;
+    description: Attribute.Text;
+    name: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::scenario.scenario',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::scenario.scenario',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiScenarioSceneScenarioScene extends Schema.CollectionType {
+  collectionName: 'scenario_scenes';
+  info: {
+    singularName: 'scenario-scene';
+    pluralName: 'scenario-scenes';
+    displayName: 'scenarioScene';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.String;
+    location: Attribute.String;
+    description: Attribute.Text;
+    props: Attribute.Relation<
+      'api::scenario-scene.scenario-scene',
+      'oneToMany',
+      'api::prop.prop'
+    >;
+    characters: Attribute.Relation<
+      'api::scenario-scene.scenario-scene',
+      'oneToMany',
+      'api::character.character'
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::scenario-scene.scenario-scene',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::scenario-scene.scenario-scene',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiSchemaSchema extends Schema.CollectionType {
+  collectionName: 'schemata';
+  info: {
+    singularName: 'schema';
+    pluralName: 'schemata';
+    displayName: 'schema';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    name: Attribute.String;
+    description: Attribute.Text;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::schema.schema',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::schema.schema',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiSocialSocial extends Schema.CollectionType {
+  collectionName: 'socials';
+  info: {
+    singularName: 'social';
+    pluralName: 'socials';
+    displayName: 'social';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    name: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::social.social',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::social.social',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -806,6 +1107,15 @@ declare module '@strapi/types' {
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'plugin::i18n.locale': PluginI18NLocale;
+      'api::character.character': ApiCharacterCharacter;
+      'api::mental.mental': ApiMentalMental;
+      'api::physical.physical': ApiPhysicalPhysical;
+      'api::player.player': ApiPlayerPlayer;
+      'api::prop.prop': ApiPropProp;
+      'api::scenario.scenario': ApiScenarioScenario;
+      'api::scenario-scene.scenario-scene': ApiScenarioSceneScenarioScene;
+      'api::schema.schema': ApiSchemaSchema;
+      'api::social.social': ApiSocialSocial;
     }
   }
 }
