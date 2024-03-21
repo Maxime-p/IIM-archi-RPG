@@ -34,7 +34,7 @@ const EditScenarioBody: FC<GeneratedScenarioProps> = ({ theScenario }) => {
   } else {
     return (
       <div className="scenario-body">
-        <h2>Title: {theScenario.title ?? ''}</h2>
+        <h2>Title: {theScenario.name ?? ''}</h2>
         <div>
           <h3>Description:</h3>
           <p>{theScenario.description ?? ''}</p>
@@ -44,7 +44,7 @@ const EditScenarioBody: FC<GeneratedScenarioProps> = ({ theScenario }) => {
           {theScenario.scenes.map((scene, index) => (
             <div key={index}>
               <h4>Scene {index + 1}</h4>
-              <p>Title: {scene.name}</p>
+              <p>Title: {scene.title}</p>
               <p>Location: {scene.location}</p>
               <p>Description: {scene.description}</p>
               <p>Characters: {scene.characters.join(', ')}</p>
