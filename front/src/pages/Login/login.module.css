@@ -8,6 +8,12 @@
     flex-direction: column;
     width: 449px;
     align-items: center;
+    p{
+      margin-top: 20px;
+      font-family: "Bebas Neue";
+      font-size: 22px;
+      color: red;
+    }
     h1 {
       font-family: 'Bebas Neue';
       margin-bottom: 50px;

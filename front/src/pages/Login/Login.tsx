@@ -9,9 +9,9 @@ const Login: React.FC = () => {
     password: '',
   })
 
-  const { handleLogin } = useAuth()
+  const { handleLogin, error } = useAuth()
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault()
     handleLogin(loginForm)
   }
@@ -43,6 +43,7 @@ const Login: React.FC = () => {
           />
           <button type={'submit'}>Login</button>
         </form>
+        {error && <p>{error}</p>}
       </aside>
     </section>
   )
