@@ -1,3 +1,13 @@
+// This TypeScript file defines a custom React hook, `useAuth`, for managing authentication state
+// in a React application. It utilizes React's `useState` for error state management, the `useNavigate`
+// hook from 'react-router-dom' for navigation, and the `useAtom` hook from Jotai for global state management
+// of user data. The `useAuth` hook provides two main functions: `handleLogin` for processing login attempts
+// and `handleLogout` for clearing the user session. The `handleLogin` function attempts to authenticate a user
+// by calling the `postApiLogin` service with the user's credentials. If successful, it stores the user data in
+// localStorage and updates the global user state using the `userAtom`. It then navigates to the home page.
+// The `handleLogout` function clears the user session from localStorage, resets the global user state, and
+// navigates to the login page. The hook returns these functions along with any authentication error messages.
+
 'use client'
 import { useState } from 'react'
 import { formLoginTypes } from './useAuth.d'
