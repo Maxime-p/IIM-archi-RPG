@@ -1,4 +1,3 @@
-
 // This TypeScript file defines a React functional component, `Login`, for the login page of a React application.
 // It utilizes several hooks for functionality: useState from React for managing form state, useAuth custom hook
 // for authentication logic, useAtom from Jotai for accessing the global user state, and useNavigate from
@@ -21,7 +20,6 @@ import { userAtom } from '../../hooks/useAuth/userAtom.ts'
 import { useNavigate } from 'react-router-dom'
 
 const Login: React.FC = () => {
-
   /*base hook navigation of React*/
   const navigate = useNavigate()
   /*State for the form login*/
@@ -29,10 +27,10 @@ const Login: React.FC = () => {
     email: '',
     password: '',
   })
-    
+
   /*Check if user is already connected, if already connected we redirect the user on the home page*/
   const [user] = useAtom(userAtom)
-  
+
   if (user) {
     navigate('/')
   }
@@ -46,7 +44,6 @@ const Login: React.FC = () => {
     handleLogin(loginForm)
   }
 
-    
   /*Function who setState loginForm onChange of input*/
   const handleInputChange = (name: string, value: string) => {
     setLoginForm((prevState) => ({
