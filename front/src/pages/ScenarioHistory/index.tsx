@@ -9,9 +9,8 @@ export const ScenarioHistoryList: FC = () => {
   const [scenarios, setScenarios] = useState<ScenarioHistory[]>([])
   useEffect(() => {
     const fetchScenarios = async () => {
-      const response = await api.get('/sentinelle/briefs')
-      console.log('response', response.data)
-      setScenarios(response.data)
+      const response = await api.get('/scenarios')
+      setScenarios(response.data.data)
     }
     fetchScenarios()
   }, [])

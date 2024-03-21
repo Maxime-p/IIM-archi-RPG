@@ -45,7 +45,7 @@ def generate():
   characters = data.get('characters')
   customPrompt = data.get('prompt')
 
-  defaultPrompt = "Vous êtes le maître de jeu d'un jeu de rôle. Générez-moi un scénario dans le monde de l'espionnage. Je veux le scénario au format JSON. Je veux un tableau, chaque élément représentant une scène. Une scène a les champs suivants : 'personnages', 'lieu', 'description' et 'nom'. Je veux uniquement une réponse au format JSON. Choisissez dans la liste suivante les personnages que vous souhaitez inclure dans le scénario : 1, 2, 3, 4. Prends en compte ceci en plus:" + customPrompt + "Et ces personnages : " + characters
+  defaultPrompt = "Vous êtes le maître de jeu d'un jeu de rôle. Générez-moi un scénario dans le monde de l'espionnage. Je veux le scénario au format JSON avec comme paramètre 'name', 'description', 'scenes'. Chaque scènes ont les champs suivants : 'title','location','description', 'characters', et 'props'. Je veux uniquement une réponse au format JSON. Choisissez dans la liste suivante les personnages que vous souhaitez inclure dans le scénario : 1, 2, 3, 4 . Prends en compte ceci en plus:" + customPrompt
 
   llm = Ollama(model="mistral", request_timeout=900.0)
   response = llm.complete(defaultPrompt)
