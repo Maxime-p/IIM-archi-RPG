@@ -9,6 +9,7 @@
   "scripts": {
     "dev": "run-p dev:*",
     "dev:front": "npm run dev --workspace front",
+    "dev:back": "npm run develop --workspace back",
     "build": "run-p build:*",
     "build:front": "npm run build --workspace front",
     "format": "run-p format:*",
