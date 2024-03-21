@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "scenarios",
+  "info": {
+    "singularName": "scenario",
+    "pluralName": "scenarios",
+    "displayName": "Scenario",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "scenes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::scenario-scene.scenario-scene"
+    },
+    "description": {
+      "type": "text"
+    },
+    "name": {
+      "type": "string"
+    }
+  }
+}
