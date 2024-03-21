@@ -26,7 +26,10 @@ function EditScenario() {
   const [scenario, setScenario] = useState<Scenario | null>(null)
   const [isLoading, setIsLoading] = useState(false)
 
-  const handleGenerate = async ({ anecdote, agentNames, }: {
+  const handleGenerate = async ({
+    anecdote,
+    agentNames,
+  }: {
     anecdote: string
     agentNames: string
   }) => {
@@ -39,9 +42,12 @@ function EditScenario() {
       setScenario(scenario)
 
       const promises = scenario.scenes.map(async (scene) => {
-        const {data: result } = await api.post<{data: {id:string}}>('scenario-scenes', {
-          data: scene,
-        })
+        const { data: result } = await api.post<{ data: { id: string } }>(
+          'scenario-scenes',
+          {
+            data: scene,
+          }
+        )
         return result.data.id
       })
       const sceneIds = await Promise.all(promises)
