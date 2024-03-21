@@ -40,18 +40,18 @@
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(4, 1fr);
     column-gap: 30px;
-  }
 
-  .adjective {
-    float: left;
-    cursor: pointer;
-    margin: 0;
-    font-size: 1.5rem;
-    transition: color 0.5s;
-  }
+    .adjective {
+      float: left;
+      cursor: pointer;
+      margin: 0;
+      font-size: 1.5rem;
+      transition: color 0.5s;
+    }
 
-  .adjective.selected {
-    color: #d02626;
-    font-weight: 900;
+    .adjective.selected {
+      color: #d02626;
+      font-weight: 900;
+    }
   }
 }
