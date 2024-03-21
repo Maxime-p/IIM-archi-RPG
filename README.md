@@ -74,6 +74,8 @@ AI script is located in the AI folder in the app.py file.
 
 # Endpoints usage
 
+## Characters
+
 ### GET /characters
 Get all characters
 
@@ -88,3 +90,32 @@ Update a character by id
 
 ### DELETE /characters/:id
 Delete a character by id
+
+## Scenarios
+
+### GET /scenarios
+Get all scenarios
+
+### GET /scenarios/:id
+Get a scenario by id
+
+### POST /scenarios
+Create a scenario
+
+### PUT /scenarios/:id
+Update a scenario by id
+
+### DELETE /scenarios/:id
+Delete a scenario by id
+
+
+## Users
+
+### POST /login
+Login a user with email and password
+```json
+{
+  "identifier": "email@example.com",
+  "password": "password"
+}
+```
