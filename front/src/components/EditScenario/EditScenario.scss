@@ -14,7 +14,7 @@
   height: 100%;
 }
 
-.side-bar-container{
+.side-bar-container {
   width: 160px;
   height: calc(100vh - 66px);
 }
@@ -27,15 +27,14 @@
   padding: 1vh;
   width: 20%;
   height: 80%;
-  background-image: url("../../assets/CardScenario.png");
+  background-image: url('../../assets/CardScenario.png');
   background-size: cover;
 }
 
 h2 {
-  font-family: "Bebas Neue";
+  font-family: 'Bebas Neue';
   font-size: 36px;
-  color: #FFFFFF;
+  color: #ffffff;
   margin: 0;
   padding: 0;
 }
-

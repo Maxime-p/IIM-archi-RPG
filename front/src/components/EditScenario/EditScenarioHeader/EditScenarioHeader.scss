@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 .editScenarioHeader {
   &-container {
@@ -20,7 +20,7 @@
     width: 30%;
     &__label {
       text-transform: uppercase;
-      font-family: "Bebas Neue", sans-serif;
+      font-family: 'Bebas Neue', sans-serif;
       font-size: 2rem;
       font-weight: 700;
       margin-bottom: 8px;
@@ -37,7 +37,7 @@
       background-color: transparent;
       border: 2px solid #ff0000;
       outline: none;
-      option{
+      option {
         color: #000;
       }
     }

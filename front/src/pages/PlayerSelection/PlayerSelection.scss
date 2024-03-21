@@ -4,7 +4,8 @@
     background-color: rgba(0, 0, 0, 0.52);
     height: calc(100vh - 66px);
   }
-  &__nextButton, &__prevButton {
+  &__nextButton,
+  &__prevButton {
     position: absolute;
     bottom: 0;
     right: 0;
@@ -12,7 +13,7 @@
     background-color: #751313;
     color: white;
     border-radius: 0;
-    font-family: "Bebas Neue";
+    font-family: 'Bebas Neue';
   }
 
   &__prevButton {

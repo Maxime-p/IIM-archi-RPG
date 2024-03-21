@@ -1,6 +1,6 @@
 // Import the EditScenario component
-import EditScenario from "../../components/EditScenario";
-import { Link } from 'react-router-dom';
+import EditScenario from '../../components/EditScenario'
+import { Link } from 'react-router-dom'
 
 /**
  * EditScenarioPage component is responsible for rendering the EditScenario component.
@@ -8,14 +8,13 @@ import { Link } from 'react-router-dom';
  * @returns {React.FC} The rendered component
  */
 function EditScenarioPage() {
-
-    // Render the EditScenario component inside a div
-    return (
-        <div className="edit-scenario-page ">
-            <EditScenario />
-        </div>
-    );
+  // Render the EditScenario component inside a div
+  return (
+    <div className="edit-scenario-page ">
+      <EditScenario />
+    </div>
+  )
 }
 
 // Export the EditScenarioPage component as the default export
-export default EditScenarioPage;
+export default EditScenarioPage

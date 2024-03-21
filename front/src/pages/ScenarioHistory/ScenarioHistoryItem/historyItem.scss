@@ -1,5 +1,7 @@
 .scenario-history-item {
-  background:linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, black 100%),  url('../../../assets/ScenarioListBg.jpg') no-repeat;
+  background:
+    linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, black 100%),
+    url('../../../assets/ScenarioListBg.jpg') no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -12,7 +14,6 @@
     margin: 0;
     padding: 0;
   }
-
 
   h2 {
     font-family: 'Bebas Neue';

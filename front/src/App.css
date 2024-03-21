@@ -51,7 +51,7 @@ nav ul li a {
   margin: auto;
   position: absolute;
   text-align: center;
-  color: #FFF;
+  color: #fff;
   font-size: 2rem;
   background: rgba(0, 0, 0, 0.8);
   line-height: 50px;
@@ -73,12 +73,12 @@ nav ul li a {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
-.HPcontainer{
+.HPcontainer {
   margin-top: auto;
   margin-bottom: auto;
 }
 
-#root{
+#root {
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -97,7 +97,6 @@ nav ul li a {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
 
 body {
   margin: 0;
@@ -137,44 +136,43 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-.cardcontainer{
+.cardcontainer {
   display: flex;
   justify-content: space-around;
 }
 
-.cards{
+.cards {
   color: white;
-    padding: 25px;
-    min-height: 525px;
-    width: 25%;
-    background-position: center center;
-    background-size: cover;
-    position: relative;
-    cursor: pointer;
+  padding: 25px;
+  min-height: 525px;
+  width: 25%;
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+  cursor: pointer;
 }
 
-.cardcontainercontent{
+.cardcontainercontent {
   position: absolute;
   bottom: 0;
 }
 
-.cardcontainercontent a{
+.cardcontainercontent a {
   text-decoration: none;
   cursor: pointer;
 }
 
-.card1{
+.card1 {
   background-image: url('./assets/CardsHP1.jpeg');
 }
 
-.card2{
+.card2 {
   background-image: url('./assets/CardsHP2.jpeg');
 }
 
-.card3{
+.card3 {
   background-image: url('./assets/CardsHP3.jpeg');
 }
-
 
 .cardstitle {
   text-transform: uppercase;
@@ -187,7 +185,7 @@ button:focus-visible {
     color: #213547;
     background-color: #ffffff;
   }
-  
+
   button {
     background-color: #f9f9f9;
   }

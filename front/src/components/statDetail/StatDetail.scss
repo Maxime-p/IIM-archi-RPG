@@ -1,5 +1,5 @@
-.statDetail{
-  &-container{
+.statDetail {
+  &-container {
     width: fit-content;
     height: fit-content;
     position: absolute;
@@ -10,14 +10,14 @@
       font-size: 1.5rem;
       font-weight: 700;
       color: white;
-      font-family: "Bebas Neue";
+      font-family: 'Bebas Neue';
       position: absolute;
     }
 
     .p-count {
       top: 0;
       left: 50%;
-        transform: translateX(-50%);
+      transform: translateX(-50%);
     }
 
     .m-count {
@@ -35,7 +35,6 @@
     .mp-count {
       top: 25%;
       right: 66%;
-
     }
 
     .ps-count {
@@ -53,7 +52,6 @@
       top: 33%;
       left: 50%;
       transform: translateX(-50%);
-
     }
   }
 }

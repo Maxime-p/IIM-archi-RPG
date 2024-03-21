@@ -1,4 +1,4 @@
-import { atom } from 'jotai';
+import { atom } from 'jotai'
 
 /**
  * `characterInfos` is an atom from the jotai state management library.
@@ -17,19 +17,16 @@ import { atom } from 'jotai';
  * @property {string} infos.clearance - The clearance level of the character.
  * @property {Array} infos.skills - The skills of the character.
  */
-export const characterInfos = atom(
-    {
-        adjectives: {
-            PHYSICAL: [],
-            MENTAL: [],
-            SOCIAL: []
-        },
-        infos: {
-            name: "",
-            profession: "",
-            clearance: "",
-            skills: [],
-        }
-
-    }
-)
+export const characterInfos = atom({
+  adjectives: {
+    PHYSICAL: [],
+    MENTAL: [],
+    SOCIAL: [],
+  },
+  infos: {
+    name: '',
+    profession: '',
+    clearance: '',
+    skills: [],
+  },
+})
