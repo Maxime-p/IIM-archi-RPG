@@ -34,7 +34,6 @@ function EditScenario() {
   }) => {
     setIsLoading(true)
     try {
-      console.log('anecdote', anecdote, 'agentNumber', agentNumber)
       const { data: scenario } = await api.post<Scenario>('sentinelle/briefs', {
         news: anecdote,
         characterNumber: agentNumber,
@@ -62,7 +61,7 @@ function EditScenario() {
       {scenario ? (
         <div className="start-scenario">
           <h2>Go with this scenario</h2>
-          <p>{scenario?.title}</p>
+          <p>{scenario?.name}</p>
         </div>
       ) : (
         <div className="start-scenario">

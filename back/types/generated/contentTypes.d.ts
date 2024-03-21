@@ -893,21 +893,9 @@ export interface ApiPlayerPlayer extends Schema.CollectionType {
     name: Attribute.String;
     profession: Attribute.String;
     clearance: Attribute.String;
-    mentals: Attribute.Relation<
-      'api::player.player',
-      'oneToMany',
-      'api::mental.mental'
-    >;
-    socials: Attribute.Relation<
-      'api::player.player',
-      'oneToMany',
-      'api::social.social'
-    >;
-    physicals: Attribute.Relation<
-      'api::player.player',
-      'oneToMany',
-      'api::physical.physical'
-    >;
+    mentals: Attribute.JSON;
+    physicals: Attribute.JSON;
+    socials: Attribute.JSON;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
