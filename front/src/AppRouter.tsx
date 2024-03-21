@@ -12,6 +12,7 @@ import PlayerSelection from './pages/PlayerSelection/PlayerSelection.tsx'
 import EditScenarioPage from './pages/EditScenarioPage'
 import { ScenarioHistoryList } from './pages/ScenarioHistory'
 import { PlayerList } from './pages/PlayerList/PlayerList.tsx'
+import Login from "./pages/Login/Login.tsx";
 
 /**
  * Renders the application content.
@@ -31,6 +32,7 @@ const AppContent: React.FC = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/scenario" element={<EditScenarioPage />} />
+        <Route path="/login" element={<Login />} />
         <Route path="/history" element={<ScenarioHistoryList />} />
         <Route path="/player" element={<PlayerSelection />} />
         <Route path="/players" element={<PlayerList />} />
