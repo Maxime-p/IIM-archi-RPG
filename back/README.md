@@ -1,3 +1,10 @@
+# IDENTIFIANT ADMIN
+
+```
+identifiant : admin@gmail.com
+mot de passe : Admin000
+```
+
 # 🚀 Getting started with Strapi
 
 Strapi comes with a full featured [Command Line Interface](https://docs.strapi.io/dev-docs/cli) (CLI) which lets you scaffold and manage your project in seconds.
@@ -7,9 +14,13 @@ Strapi comes with a full featured [Command Line Interface](https://docs.strapi.i
 Start your Strapi application with autoReload enabled. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-develop)
 
 ```
+
 npm run develop
+
 # or
+
 yarn develop
+
 ```
 
 ### `start`
@@ -17,9 +28,13 @@ yarn develop
 Start your Strapi application with autoReload disabled. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-start)
 
 ```
+
 npm run start
+
 # or
+
 yarn start
+
 ```
 
 ### `build`
@@ -27,9 +42,13 @@ yarn start
 Build your admin panel. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-build)
 
 ```
+
 npm run build
+
 # or
+
 yarn build
+
 ```
 
 ## ⚙️ Deployment
@@ -55,3 +74,7 @@ Feel free to check out the [Strapi GitHub repository](https://github.com/strapi/
 ---
 
 <sub>🤫 Psst! [Strapi is hiring](https://strapi.io/careers).</sub>
+
+```
+
+```
